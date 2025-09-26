@@ -39,6 +39,10 @@
             font-family: 'Playfair Display', serif;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         /* Font for the main paragraph text */
         .font-body {
             font-family: 'Libre Baskerville', serif;
@@ -79,6 +83,75 @@
         #services {
             background: url("images/jwils-logo.png") no-repeat center center fixed;
             opacity: 0.95;
+        }
+        /* WhatsApp Sticky Button */
+        .whatsapp-sticky-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .whatsapp-sticky-btn:hover {
+            transform: scale(1.1);
+        }
+        /* Sticky Ad Card Styling */
+        .sticky-ad-card {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 999;
+            max-width: 250px;
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .sticky-ad-card .card {
+            border: 2px solid var(--jwils-red-primary);
+        }
+        
+        .close-ad-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--jwils-red-primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-ad-btn:hover {
+            background-color: var(--jwils-red-dark);
+        }
+        
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -228,7 +301,7 @@
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="p-5 bg-white rounded-4 shadow-lg mb-5">
-            <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">Portfolio Highlights</h2>
+            <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">Companies/Brands I Work With.</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 rounded-4 shadow-sm border border-jwils-red-dark">
@@ -251,6 +324,14 @@
                         <img src="images/podcast.webp" class="card-img-top" alt="A podcast and hosting graphic" height="300" style="object-fit: cover;">
                         <div class="card-body">
                             <h3 class="fs-5 fw-bold text-jwils-red-primary font-heading">Podcast & Hosting</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 rounded-4 shadow-sm border border-jwils-red-dark">
+                        <img src="images/newimg.jpg" class="card-img-top" alt="A podcast and hosting graphic" height="300" style="object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="fs-5 fw-bold text-jwils-red-primary font-heading">Drivers link centre</h3>
                         </div>
                     </div>
                 </div>
@@ -288,6 +369,42 @@
                         <p class="mb-0 font-body">"Working with Judith was a game-changer for our social media. Her professionalism and creativity are second to none."</p>
                         <footer class="blockquote-footer mt-2">Colleague</footer>
                     </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="growth-class" class="p-5 bg-jwils-red-primary rounded-4 shadow-lg text-white mb-5">
+            <div class="container text-center">
+                <h2 class="fs-2 fw-semibold mb-3 font-heading">
+                    Tired of Low Sales & Zero Online Growth?
+                </h2>
+                <p class="lead fw-light font-body">
+                    I know the struggle. But I also know how to turn it around with the right strategy.
+                </p>
+                <p class="fs-4 fw-bold mt-4 mb-3 font-heading">
+                    Join My 2-Day Business Growth Class!
+                </p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="fs-5 font-body">
+                            This isn’t theory—it’s practical strategies you can apply to your business immediately.
+                        </p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 400px;">
+                            <li class="my-2"><i class="fas fa-check-circle me-2 text-white"></i> Branding & positioning</li>
+                            <li class="my-2"><i class="fas fa-check-circle me-2 text-white"></i> Running effective ads</li>
+                            <li class="my-2"><i class="fas fa-check-circle me-2 text-white"></i> Business blueprint strategies</li>
+                            <li class="my-2"><i class="fas fa-check-circle me-2 text-white"></i> Digital marketing</li>
+                            <li class="my-2"><i class="fas fa-check-circle me-2 text-white"></i> Social media growth hacks</li>
+                        </ul>
+                        <div class="mt-4">
+                            <p class="mb-1 fs-5 fw-bold">Date: November 21st & 22nd</p>
+                            <p class="mb-1 fs-5 fw-bold">Fee: GH¢400</p>
+                            <p class="mb-4">Registration closes soon.</p>
+                            <a href="https://wa.link/ksvt38" class="btn btn-lg rounded-pill btn-light text-jwils-red-primary fw-bold hover-bg-jwils-red-light" target="_blank">
+                                Secure Your Seat Today
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -387,7 +504,26 @@
             </div>
         </footer>
     </main>
-
+    <a href="https://wa.link/ksvt38" class="whatsapp-sticky-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div id="sticky-ad-card" class="sticky-ad-card">
+        <button id="close-ad-btn" class="close-ad-btn">&times;</button>
+        <div class="card bg-white rounded-4 shadow-lg p-3">
+            <div class="card-body text-center">
+                <h5 class="card-title font-heading fw-bold text-jwils-red-primary">Business Growth Class</h5>
+                <p class="card-text fw-light small">
+                    Tired of low sales? Learn strategies for branding, digital marketing, and more.
+                </p>
+                <p class="mb-2 fw-bold small">
+                    November 21st & 22nd
+                </p>
+                <a href="#growth-class" class="btn btn-sm btn-jwils rounded-pill stretched-link">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- EmailJS script -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Bootstrap JS -->
@@ -454,6 +590,34 @@
                 formMessage.innerHTML = '';
             }, 5000); // clears after 5 seconds
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const adCard = document.getElementById('sticky-ad-card');
+            const closeBtn = document.getElementById('close-ad-btn');
+            const showDelay = 3000; // Show after 3 seconds
+            const reAppearDelay = 5 * 60 * 1000; // Reappear after 5 minutes
+    
+            // Function to show the ad
+            function showAd() {
+                adCard.style.display = 'block';
+            }
+    
+            // Function to hide the ad
+            function hideAd() {
+                adCard.style.display = 'none';
+                // Set a timer to show the ad again after 5 minutes
+                setTimeout(showAd, reAppearDelay);
+            }
+    
+            // Initially show the ad after a short delay
+            setTimeout(showAd, showDelay);
+    
+            // Event listener for the close button
+            closeBtn.addEventListener('click', () => {
+                hideAd();
+            });
+        });
     </script>
 </body>
 </html>
