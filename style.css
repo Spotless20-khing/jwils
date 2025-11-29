@@ -223,3 +223,24 @@ a { text-decoration: none; }
 
 /* Hide sticky ad if you don't use it */
 .sticky-ad-card { display: none !important; }
+
+/* ==================== MEDIA QUERIES (if any) ==================== */
+@media (max-width: 576px) {
+    p {
+        font-size: 14px !important;
+    }
+    .hero-section {
+        padding-top: 100px !important;
+    }
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .p-5 {
+        padding: 2rem !important;
+    }
+    #about-me img {
+        border-radius: 12px !important;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+}
