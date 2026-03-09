@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +26,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="50">
-    <!-- Header -->
-    <header class="p-3 sticky-top transparent-header" id="main-header">
+    <!-- Header / Navigation -->
+    <header class="transparent-header" id="main-header">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
                 <a href="#hero" class="text-decoration-none me-3">
@@ -34,9 +35,11 @@
                 </a>
                 <h4 class="m-0 fw-bold font-heading" id="header-title">Jwils Strategy Consult</h4>
             </div>
-            <a href="#contact" class="btn btn-jwils btn-sm rounded-pill px-4 d-none d-md-block">
-                <i class="fas fa-user-plus me-1"></i> Contact Now
-            </a>
+            <nav id="main-nav">
+                <a href="#contact" class="btn btn-jwils btn-sm rounded-pill px-4 d-none d-md-block">
+                    <i class="fas fa-user-plus me-1"></i> Contact Now
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -44,27 +47,168 @@
         <section id="hero" class="hero-section text-white text-center py-5">
             <div class="container py-5 wow fadeIn" data-wow-duration="1.5s">
                 <h1 class="display-3 fw-bold mb-4 font-heading">
-                    Strategic Marketing, Branding & Business Growth Solutions.
+                    Build a Business That Attracts Customers Consistently — Not Occasionally.
                 </h1>
-                <p class="lead mb-5 font-body">
-                    We help entrepreneurs, SMEs, and creators build profitable, visible, and influential brands through smart digital strategy, powerful content, and consistent execution.
+                <p class="lead mb-3 font-body">
+                    Join the Business Growth Implementation Intensive and learn how to create better content, run ads properly, and turn attention into real revenue.
                 </p>
-                <a href="#contact" class="btn btn-lg rounded-pill btn-jwils px-5">
-                    <i class="fas fa-calendar-alt me-2"></i> Book a Consultation →
+                <p class="mb-4">
+                    📍 Osu &nbsp;&nbsp; 📅 2nd May 2026 &nbsp;&nbsp; 👥 Limited to 50 entrepreneurs
+                </p>
+                <a href="#pricing" class="btn btn-lg rounded-pill btn-jwils px-5">
+                    <i class="fas fa-ticket-alt me-2"></i> Secure Your Seat Now
                 </a>
-                <!-- <p class="mt-3 fs-6 fw-bold text-gold-accent wow fadeInUp" data-wow-delay="0.5s">
-                    📌 Let’s elevate your brand.
-                </p> -->
             </div>
         </section>
 
         <!-- <div class="container-fluid px-4 px-lg-5 px-xl-5"> -->
         <div class="container-fluid px-4 px-lg-5 px-xl-5 pt-5 pt-lg-7">
+            <!-- Social Proof Section -->
+            <section id="social-proof" class="p-5 bg-white rounded-4 shadow-lg mb-5">
+                <div class="container">
+                    <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">They believe it when they see it — proven results from past attendees.</h2>
+                    <p class="text-secondary text-center mb-5">
+                        "Last year’s masterclass united entrepreneurs across industries with actionable strategies to grow online — see the real impact for yourself."
+                    </p>
+                    <div id="proofCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="60000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row g-3 justify-content-center">
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (1).jpeg" alt="Event Gallery 1" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (2).jpeg" alt="Event Gallery 2" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (3).jpeg" alt="Event Gallery 3" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (4).jpeg" alt="Event Gallery 4" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row g-3 justify-content-center">
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (5).jpeg" alt="Event Gallery 5" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (6).jpeg" alt="Event Gallery 6" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting (7).jpeg" alt="Event Gallery 7" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <img src="images/proof-meeting.jpeg" alt="Event Gallery 8" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#proofCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#proofCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#testimonials" class="btn btn-outline-dark btn-lg rounded-pill">View Testimonials</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Value Section -->
+            <section id="value" class="p-5 bg-jwils-red-light rounded-4 shadow-lg mb-5">
+                <div class="container">
+                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading">What You Will Learn</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                                <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Content Creation Session</h3>
+                                <p class="text-secondary mb-3">Learn how to:</p>
+                                <ul class="list-unstyled text-secondary">
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Shoot high-quality photos and videos using your phone</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Create content that attracts customers</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Structure content for engagement and trust</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                                <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Ads Setup & Marketing</h3>
+                                <p class="text-secondary mb-3">Learn how to:</p>
+                                <ul class="list-unstyled text-secondary">
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Set up your ads account properly</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Understand how campaigns actually work</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Avoid wasting money on ineffective ads</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                                <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Funnel & Conversion Strategy</h3>
+                                <p class="text-secondary mb-3">Learn how to:</p>
+                                <ul class="list-unstyled text-secondary">
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Turn attention into paying clients</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Structure a simple marketing system</li>
+                                    <li><i class="fas fa-check text-jwils-red-primary me-2"></i>Track what is working in your business</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="p-5 bg-white rounded-4 shadow-lg mb-5">
+                <div class="container">
+                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading">Secure Your Spot</h2>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border border-jwils-red-primary">
+                                <div class="text-center mb-3">
+                                    <h3 class="fs-3 fw-bold text-jwils-red-primary font-heading">Early Bird</h3>
+                                    <p class="display-4 fw-bold text-dark">GH¢850</p>
+                                </div>
+                                <ul class="list-unstyled text-secondary mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Access to full intensive</li>
+                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Training materials</li>
+                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Networking session</li>
+                                </ul>
+                                <div class="text-center">
+                                    <a href="registration.html" class="btn btn-jwils rounded-pill px-4">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border border-secondary">
+                                <div class="text-center mb-3">
+                                    <h3 class="fs-3 fw-bold text-secondary font-heading">Regular</h3>
+                                    <p class="display-4 fw-bold text-dark">GH¢1 200</p>
+                                </div>
+                                <ul class="list-unstyled text-secondary mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Access to full intensive</li>
+                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Training materials</li>
+                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Networking session</li>
+                                </ul>
+                                <div class="text-center">
+                                    <a href="registration.html" class="btn btn-outline-secondary rounded-pill px-4">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center mt-4 text-secondary">Seats are limited to 50 participants.</p>
+                </div>
+            </section>
+
             <!-- About Jwils Section -->
             <section id="about-jwils" class="p-5 bg-white rounded-4 shadow-lg mb-5">
-                <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">About Jwils Strategy and Beyond</h2>
+                <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">About Jwils Strategy Consult</h2>
                 <p class="text-secondary text-center font-body">
-                    Jwils Strategy Consult is a business and marketing consulting firm dedicated to helping businesses, entrepreneurs, and startups achieve growth and maximize their potential. We provide services in strategic planning, marketing strategy, digital marketing, brand development, and business solutions tailored to meet each client’s unique needs. Our approach combines creativity, data-driven insights, and practical solutions to help clients succeed in competitive markets.
+                    Jwils Strategy Consult is a business and marketing consulting firm dedicated to helping businesses, entrepreneurs, and startups achieve growth and maximize their potential. We provide services in strategic planning, marketing strategy, digital marketing, brand development, and business solutions tailored to meet each client’s unique needs. Our approach combines creativity, data-driven insights, and practical solutions to help clients succeed in competitive markets.
                 </p>
                 <div class="row g-4 mt-4">
                     <div class="col-md-6">
@@ -117,7 +261,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Services Section -->
             <section id="services" class="p-5 bg-white rounded-4 shadow-lg mb-5">
                 <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">Services</h2>
@@ -312,50 +456,43 @@
                     </div>
                 </div>
             </section>
-            <section class="brands-grid-section p-5 bg-white rounded-4 shadow-lg mb-5">
-                <div class="container py-4">
-                    <h2 class="display-5 fw-bold text-center mb-5 text-white font-heading" data-aos="fade-down">
-                        Brands & Projects We’ve Worked With
+            <section class="brands-grid-section p-3 p-lg-5 bg-white rounded-4 shadow-lg mb-5">
+                <div class="container py-3 py-lg-5">
+                    <h2 class="display-5 fw-bold text-center mb-3 mb-lg-5 text-white font-heading" data-aos="fade-down">
+                        Brands & Projects We've Worked With
                     </h2>
-            
-                    <div class="row g-4 g-xl-5 justify-content-center">
-                        <!-- Row 1 -->
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-3 g-md-4 g-lg-5 justify-content-center">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="brand-card"><p>Drivers Link Centre</p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="150">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="150">
                             <div class="brand-card"><p>Go Mode<br><small>Sizimi Group</small></p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="brand-card"><p>Berma Jewelry<br><small>Brightness Jewellery</small></p></div>
                         </div>
-            
-                        <!-- Row 2 -->
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="250">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="250">
                             <div class="brand-card"><p>Black Star<br>Royal Resort</p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                             <div class="brand-card"><p>High School Plug</p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="350">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="350">
                             <div class="brand-card special"><p class="fw-bold">Jwils Fashion &<br>Modeling Challenge</p></div>
                         </div>
-            
-                        <!-- Row 3 -->
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                             <div class="brand-card"><p>Skin Zone Spa</p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="450">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="450">
                             <div class="brand-card"><p>Beauty by Fela</p></div>
                         </div>
-                        <div class="col-4 col-md-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="col-12 col-sm-4 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                             <div class="brand-card"><p>Relic Casa Ltd<br><small>& Relic Edge</small></p></div>
                         </div>
                     </div>
-            
-                    <div class="text-center mt-5">
-                        <p class="fs-4 text-white-50 mb-4">…and many more emerging brands</p>
-                        <a href="#contact" class="btn btn-lg rounded-pill btn-jwils px-5">Ready to Join Them?</a>
+                    <div class="text-center mt-3 mt-lg-5">
+                        <p class="fs-4 text-white-50 mb-4">…and ma    ny more emerging brands</p>
+                        <a href="#contact" class="btn btn-lg round    ed-pill btn-jwils px-5">Ready to Join Them?</a>
                     </div>
                 </div>
             </section>
@@ -412,6 +549,57 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Payment Section -->
+            <section id="payment" class="p-5 bg-white rounded-4 shadow-lg mb-5">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="photo-stack mx-auto">
+                                <img src="images/Judith (1).jpeg" alt="Judith Wilson center" class="center">
+                                <img src="images/Judith (2).jpeg" alt="Judith Wilson left" class="left">
+                                <img src="images/judith-headshot.jpg" alt="Judith Wilson right" class="right">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <h2 class="fs-2 fw-semibold text-dark mb-4 text-center text-md-start font-heading">Make a Payment</h2>
+                            <p class="text-secondary mb-4">Secure your consultation or service with Judith Wilson. Enter your preferred amount and proceed with payment.</p>
+                            <div class="card p-4 bg-light border-0">
+                                <form id="paymentForm">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="paymentName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="paymentName" name="paymentName" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="paymentEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="paymentEmail" name="paymentEmail" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="paymentPhone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="paymentPhone" name="paymentPhone" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="paymentAmount" class="form-label">Amount (GHS)</label>
+                                            <input type="number" class="form-control" id="paymentAmount" name="paymentAmount" min="1" step="0.01" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="paymentDescription" class="form-label">Description (Optional)</label>
+                                            <input type="text" class="form-control" id="paymentDescription" name="paymentDescription" placeholder="e.g., Consultation fee">
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-jwils btn-lg px-5" id="paymentBtn">
+                                                <i class="fas fa-credit-card me-2"></i> Pay Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="payment-message" class="mt-3 text-center"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <!-- Contact Section -->
             <section id="contact" class="p-5 bg-white rounded-4 shadow-lg mb-5">
@@ -436,7 +624,7 @@
                         </div>
                         <!-- map code -->
                         <div class="mt-5">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d394.3385250669329!2d-0.22195126156679632!3d5.631227068176116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sgh!4v1756894821558!5m2!1sen!2sgh" width="100%" height="250" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d394.3385250669329!2d-0.22195126156679632!3d5.631227068176116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sgh!4v1756894821558!5m2!1sen!2sgh" width="100%" height="330" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -517,7 +705,9 @@
     <a href="https://wa.link/wyh0jj" class="whatsapp-sticky-btn" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- EmailJS script -->
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- EmailJS Script -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

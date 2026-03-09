@@ -13,6 +13,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f3f4f6;
+    /* padding-top: 0; - Removed to allow header to sit directly on hero */
 }
 
 h1, h2, h3, h4, .font-heading {
@@ -60,7 +61,7 @@ a { text-decoration: none; }
 .hero-section {
     background: 
         radial-gradient(circle at center, rgba(128, 2, 0, 0.75), rgba(0, 0, 0, 0.92)),
-        url("images/hero-bg.jpg") center/cover no-repeat;
+        url("images/hero-bg.png") center/cover no-repeat;
     min-height: 90vh;
     padding-top: 150px !important;
     display: flex;
@@ -73,9 +74,13 @@ a { text-decoration: none; }
 .transparent-header {
     position: fixed;
     top: 0; left: 0; width: 100%;
+    min-height: 70px;
+    padding: 0.75rem 0;
     background: transparent;
     transition: background 0.4s ease, box-shadow 0.4s ease;
     z-index: 1030;
+    display: flex;
+    align-items: center;
 }
 
 /* Before scroll – white text + glowing button */
@@ -102,6 +107,60 @@ a { text-decoration: none; }
     background-color: var(--jwils-red-primary);
     border: none;
     color: white;
+}
+
+/* ==================== PHOTO STACK IN PAYMENT SECTION ==================== */
+.photo-stack {
+    position: relative;
+    width: 300px;
+    height: 220px;
+}
+.photo-stack img {
+    position: absolute;
+    width: 180px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.photo-stack:hover img {
+    transform: scale(1.05);
+}
+.photo-stack .center {
+    z-index: 3;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+}
+.photo-stack .left {
+    z-index: 2;
+    top: 20px;
+    left: 0;
+    transform: rotate(-10deg);
+}
+.photo-stack .right {
+    z-index: 2;
+    top: 20px;
+    right: 0;
+    transform: rotate(10deg);
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .photo-stack {
+        width: 200px;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+    .photo-stack img {
+        width: 120px;
+    }
+    .photo-stack .center {
+        transform: translateX(-50%) translateY(-5px);
+    }
+    .photo-stack .left, .photo-stack .right {
+        top: 15px;
+    }
 }
 
 /* ==================== SERVICE CARDS – ICON CIRCLE & HOVER ==================== */
@@ -192,6 +251,20 @@ a { text-decoration: none; }
     display: block;
 }
 
+/* Mobile adjustments for brand cards */
+@media (max-width: 767.98px) {
+    .brand-card {
+        height: 100px;
+        padding: 0.75rem;
+    }
+    .brand-card p {
+        font-size: 0.9rem;
+    }
+    .brand-card p small {
+        font-size: 0.7rem;
+    }
+}
+
 /* ==================== WHATSAPP BUTTON ==================== */
 .whatsapp-sticky-btn {
     position: fixed;
@@ -223,3 +296,27 @@ a { text-decoration: none; }
 
 /* Hide sticky ad if you don't use it */
 .sticky-ad-card { display: none !important; }
+
+/* ==================== MEDIA QUERIES (if any) ==================== */
+@media (max-width: 576px) {
+    p {
+        font-size: 14px !important;
+    }
+    .hero-section {
+        padding-top: 100px !important;
+    }
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .p-5 {
+        padding: 2rem !important;
+    }
+    #about-me img {
+        border-radius: 12px !important;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .btn-jwils {
+        font-size: small;
+    }
+}
