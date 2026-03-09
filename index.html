@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,9 @@
 
     <!-- Font Awesome 6.6.0 - WORKING -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Favicon & OG Tags -->
     <link rel="icon" type="image/png" href="images/jwils-logo.png">
@@ -53,9 +56,9 @@
                     Join the Business Growth Implementation Intensive and learn how to create better content, run ads properly, and turn attention into real revenue.
                 </p>
                 <p class="mb-4">
-                    📍 Osu &nbsp;&nbsp; 📅 2nd May 2026 &nbsp;&nbsp; 👥 Limited to 50 entrepreneurs
+                    <i class="fas fa-map-marker-alt"></i> Osu &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i> 2nd May 2026 &nbsp;&nbsp; <i class="fas fa-users"></i> Limited to 50 entrepreneurs
                 </p>
-                <a href="#pricing" class="btn btn-lg rounded-pill btn-jwils px-5">
+                <a href="#countdown-timer" class="btn btn-lg rounded-pill btn-jwils px-5">
                     <i class="fas fa-ticket-alt me-2"></i> Secure Your Seat Now
                 </a>
             </div>
@@ -64,42 +67,42 @@
         <!-- <div class="container-fluid px-4 px-lg-5 px-xl-5"> -->
         <div class="container-fluid px-4 px-lg-5 px-xl-5 pt-5 pt-lg-7">
             <!-- Social Proof Section -->
-            <section id="social-proof" class="p-5 bg-white rounded-4 shadow-lg mb-5">
+            <section id="social-proof" class="p-5 bg-white rounded-4 shadow-lg mb-5 wow fadeInUp">
                 <div class="container">
-                    <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading">They believe it when they see it — proven results from past attendees.</h2>
-                    <p class="text-secondary text-center mb-5">
+                    <h2 class="fs-2 fw-semibold text-dark mb-4 text-center font-heading wow fadeInDown">They believe it when they see it — proven results from past attendees.</h2>
+                    <p class="text-secondary text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
                         "Last year’s masterclass united entrepreneurs across industries with actionable strategies to grow online — see the real impact for yourself."
                     </p>
-                    <div id="proofCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="60000">
+                    <div id="proofCarousel" class="carousel slide wow zoomIn" data-wow-delay="0.4s" data-bs-ride="carousel" data-bs-interval="60000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row g-3 justify-content-center">
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInLeft" data-wow-delay="0.6s">
                                         <img src="images/proof-meeting (1).jpeg" alt="Event Gallery 1" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInLeft" data-wow-delay="0.7s">
                                         <img src="images/proof-meeting (2).jpeg" alt="Event Gallery 2" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInRight" data-wow-delay="0.8s">
                                         <img src="images/proof-meeting (3).jpeg" alt="Event Gallery 3" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInRight" data-wow-delay="0.9s">
                                         <img src="images/proof-meeting (4).jpeg" alt="Event Gallery 4" class="img-fluid rounded">
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row g-3 justify-content-center">
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInLeft" data-wow-delay="0.6s">
                                         <img src="images/proof-meeting (5).jpeg" alt="Event Gallery 5" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInLeft" data-wow-delay="0.7s">
                                         <img src="images/proof-meeting (6).jpeg" alt="Event Gallery 6" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInRight" data-wow-delay="0.8s">
                                         <img src="images/proof-meeting (7).jpeg" alt="Event Gallery 7" class="img-fluid rounded">
                                     </div>
-                                    <div class="col-6 col-md-3">
+                                    <div class="col-6 col-md-3 wow slideInRight" data-wow-delay="0.9s">
                                         <img src="images/proof-meeting.jpeg" alt="Event Gallery 8" class="img-fluid rounded">
                                     </div>
                                 </div>
@@ -114,19 +117,19 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <div class="text-center mt-4">
+                    <div class="text-center mt-4 wow fadeInUp" data-wow-delay="1s">
                         <a href="#testimonials" class="btn btn-outline-dark btn-lg rounded-pill">View Testimonials</a>
                     </div>
                 </div>
             </section>
 
             <!-- Value Section -->
-            <section id="value" class="p-5 bg-jwils-red-light rounded-4 shadow-lg mb-5">
+            <section id="value" class="p-5 bg-jwils-red-light rounded-4 shadow-lg mb-5 wow fadeInUp">
                 <div class="container">
-                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading">What You Will Learn</h2>
+                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading wow fadeInDown">What You Will Learn</h2>
                     <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                        <div class="col-md-4 wow slideInLeft" data-wow-delay="0.2s">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white hover-lift">
                                 <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Content Creation Session</h3>
                                 <p class="text-secondary mb-3">Learn how to:</p>
                                 <ul class="list-unstyled text-secondary">
@@ -136,8 +139,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white hover-lift">
                                 <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Ads Setup & Marketing</h3>
                                 <p class="text-secondary mb-3">Learn how to:</p>
                                 <ul class="list-unstyled text-secondary">
@@ -147,8 +150,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white">
+                        <div class="col-md-4 wow slideInRight" data-wow-delay="0.6s">
+                            <div class="card h-100 p-4 rounded-4 shadow-sm border-0 bg-white hover-lift">
                                 <h3 class="fs-4 fw-bold text-jwils-red-primary font-heading mb-3">Funnel & Conversion Strategy</h3>
                                 <p class="text-secondary mb-3">Learn how to:</p>
                                 <ul class="list-unstyled text-secondary">
@@ -162,45 +165,61 @@
                 </div>
             </section>
 
-            <!-- Pricing Section -->
-            <section id="pricing" class="p-5 bg-white rounded-4 shadow-lg mb-5">
-                <div class="container">
-                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading">Secure Your Spot</h2>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-6">
-                            <div class="card h-100 p-4 rounded-4 shadow-sm border border-jwils-red-primary">
-                                <div class="text-center mb-3">
-                                    <h3 class="fs-3 fw-bold text-jwils-red-primary font-heading">Early Bird</h3>
-                                    <p class="display-4 fw-bold text-dark">GH¢850</p>
-                                </div>
-                                <ul class="list-unstyled text-secondary mb-4">
-                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Access to full intensive</li>
-                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Training materials</li>
-                                    <li class="mb-2"><i class="fas fa-check text-jwils-red-primary me-2"></i>Networking session</li>
-                                </ul>
-                                <div class="text-center">
-                                    <a href="registration.html" class="btn btn-jwils rounded-pill px-4">Register Now</a>
+            <!-- Pricing and Countdown Timer Section -->
+            <section id="countdown-timer" class="countdown-section p-5 bg-jwils-red-light rounded-4 shadow-lg mb-5 wow fadeInUp">
+                <div class="container-fluid px-4 px-lg-5 px-xl-5">
+                    <div class="container">
+                        <div class="row align-items-center g-5">
+                            <!-- Countdown Timer on Left -->
+                            <div class="col-md-6 text-center wow fadeInLeft" data-wow-duration="1s">
+                                <div class="countdown-container">
+                                    <div class="countdown-item wow bounceIn" data-wow-delay="0.2s">
+                                        <div class="countdown-value" id="days">00</div>
+                                        <div class="countdown-label">DAYS</div>
+                                    </div>
+                                    <div class="countdown-item wow bounceIn" data-wow-delay="0.4s">
+                                        <div class="countdown-value" id="hours">00</div>
+                                        <div class="countdown-label">HOURS</div>
+                                    </div>
+                                    <div class="countdown-item wow bounceIn" data-wow-delay="0.6s">
+                                        <div class="countdown-value" id="minutes">00</div>
+                                        <div class="countdown-label">MINUTES</div>
+                                    </div>
+                                    <div class="countdown-item wow bounceIn" data-wow-delay="0.8s">
+                                        <div class="countdown-value" id="seconds">00</div>
+                                        <div class="countdown-label">SECONDS</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card h-100 p-4 rounded-4 shadow-sm border border-secondary">
-                                <div class="text-center mb-3">
-                                    <h3 class="fs-3 fw-bold text-secondary font-heading">Regular</h3>
-                                    <p class="display-4 fw-bold text-dark">GH¢1 200</p>
+    
+                            <!-- Text Content on Right -->
+                            <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <h2 class="fs-2 fw-bold text-dark mb-4 font-heading">Event Countdown</h2>
+                                <p class="lead text-secondary mb-3">
+                                    The Business Growth Implementation Intensive is coming soon. Secure your seat before spots are gone!
+                                </p>
+                                
+                                <!-- Pricing Information -->
+                                <div class="pricing-highlight mb-4 p-3 bg-white rounded-3 shadow-sm wow slideInUp" data-wow-delay="0.5s">
+                                    <h4 class="fs-5 fw-bold text-jwils-red-primary mb-2">Early Bird Offer - GH¢850</h4>
+                                    <p class="text-muted mb-1"><small>Regular Price: GH¢1,200</small></p>
+                                    <p class="text-success fw-semibold mb-0"><i class="fas fa-tag me-1"></i>Save GH¢350!</p>
                                 </div>
-                                <ul class="list-unstyled text-secondary mb-4">
-                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Access to full intensive</li>
-                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Training materials</li>
-                                    <li class="mb-2"><i class="fas fa-check text-secondary me-2"></i>Networking session</li>
+                                
+                                <ul class="list-unstyled text-secondary mb-4 wow fadeInUp" data-wow-delay="0.7s">
+                                    <li class="mb-3"><i class="fas fa-check-circle text-jwils-red-primary me-2"></i><strong>Content Creation Session</strong></li>
+                                    <li class="mb-3"><i class="fas fa-check-circle text-jwils-red-primary me-2"></i><strong>Ads Setup & Marketing</strong></li>
+                                    <li class="mb-3"><i class="fas fa-check-circle text-jwils-red-primary me-2"></i><strong>Funnel & Conversion</strong></li>
+                                    <li class="mb-3"><i class="fas fa-check-circle text-jwils-red-primary me-2"></i><strong>Limited to 50 Entrepreneurs</strong></li>
                                 </ul>
-                                <div class="text-center">
-                                    <a href="registration.html" class="btn btn-outline-secondary rounded-pill px-4">Register Now</a>
+                                <div class="d-flex gap-3 wow fadeInUp" data-wow-delay="0.9s">
+                                    <a href="registration.html" class="btn btn-jwils btn-lg rounded-pill px-5">
+                                        <i class="fas fa-ticket-alt me-2"></i> Get Your Seat
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center mt-4 text-secondary">Seats are limited to 50 participants.</p>
                 </div>
             </section>
 
@@ -354,105 +373,89 @@
                 </div>
             </section>
 
-            <section class="py-5 bg-jwils-red-light rounded-4 my-5">
-                <div class="container">
-                    <h2 class="fs-2 fw-semibold text-dark mb-5 text-center font-heading">Why Choose Us</h2>
-                    
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-lg-8 col-xl-7">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-award fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Professional, reliable,result-oriented</h4>
-                                            <p class="text-secondary mb-0">We deliver measurable results with professionalism you can trust.</p>
-                                        </div>
-                                    </div>
+            <section class="why-section p-5 rounded-4 shadow-lg mb-5">
+                <div class="container text-center">
+                    <h2 class="why-heading">Why Choose <em>Us</em></h2>
+                    <p class="why-subtitle">Everything you need to grow — under one strategic roof.</p>
+
+                    <div class="comb">
+                        <!-- ROW 1 — 3 hexagons -->
+                        <div class="hex-row">
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2l2.09 6.41H21l-5.45 3.96 2.09 6.41L12 14.82l-5.64 4 2.09-6.41L3 8.41h6.91z"/>
+                                    </svg>
+                                    <p class="hex-title">Professional, reliable &amp; result-oriented</p>
+                                    <p class="hex-desc">Measurable results with professionalism you can trust.</p>
                                 </div>
-            
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-briefcase fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Proven experience across multiple industries</h4>
-                                            <p class="text-secondary mb-0">Successfully served fashion, beauty, lifestyle, e-commerce, and more.</p>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                    <p class="hex-title">Proven experience across multiple industries</p>
+                                    <p class="hex-desc">Fashion, beauty, lifestyle, e-commerce &amp; more.</p>
                                 </div>
-            
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-map-signs fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Clear, structured, and strategic approach</h4>
-                                            <p class="text-secondary mb-0">No guesswork — every step is planned and executed with precision.</p>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-user-tie fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Personalized solutions for every client</h4>
-                                            <p class="text-secondary mb-0">Your brand is unique, and so is our strategy for you.</p>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-brain fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Creative + analytical direction</h4>
-                                            <p class="text-secondary mb-0">Beautiful creativity backed by data-driven decisions.</p>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-comments fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div>
-                                            <h4 class="fw-bold text-dark mb-2">Transparent communication & accountability</h4>
-                                            <p class="text-secondary mb-0">Weekly reports, direct access, and full transparency at all times.</p>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-12 text-center mt-3">
-                                    <div class="d-flex gap-3 justify-content-center align-items-start">
-                                        <div class="flex-shrink-0">
-                                            <i class="fas fa-dollar-sign fa-2x text-jwils-red-primary"></i>
-                                        </div>
-                                        <div class="text-start">
-                                            <h4 class="fw-bold text-dark mb-2">Quality services at competitive rates</h4>
-                                            <p class="text-secondary mb-0">Premium expertise without the agency price tag.</p>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                    </svg>
+                                    <p class="hex-title">Clear, structured &amp; strategic approach</p>
+                                    <p class="hex-desc">Every step planned and executed with precision.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-            
-                    <!-- Optional CTA -->
-                    <div class="text-center mt-5">
-                        <a href="#contact" class="btn btn-lg rounded-pill btn-jwils px-5">
-                            Let’s Grow Your Brand Together
-                        </a>
+
+                        <!-- ROW 2 — 4 hexagons (centers naturally into the gaps of row 1) -->
+                        <div class="hex-row">
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    <p class="hex-title">Personalized solutions for every client</p>
+                                    <p class="hex-desc">Your brand is unique, so is our strategy for you.</p>
+                                </div>
+                            </div>
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="13" cy="6" r="3"/>
+                                        <path d="M3 20c0-4 4-7 10-7"/>
+                                        <path d="M17 14l2 2 4-4"/>
+                                    </svg>
+                                    <p class="hex-title">Creative + analytical direction</p>
+                                    <p class="hex-desc">Beautiful creativity backed by data-driven decisions.</p>
+                                </div>
+                            </div>
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                    </svg>
+                                    <p class="hex-title">Transparent communication &amp; accountability</p>
+                                    <p class="hex-desc">Weekly reports, direct access, full transparency.</p>
+                                </div>
+                            </div>
+                            <div class="hex">
+                                <div class="face">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    <p class="hex-title">Quality services at competitive rates</p>
+                                    <p class="hex-desc">Premium expertise without the agency price tag.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -707,8 +710,8 @@
     </a>
     <!-- Paystack Script -->
     <script src="https://js.paystack.co/v1/inline.js"></script>
-    <!-- EmailJS Script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- WOW.js for scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
