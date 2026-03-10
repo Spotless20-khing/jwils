@@ -3,92 +3,603 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration - Business Growth Implementation Intensive</title>
+    <title>Register — Business Growth Intensive | Jwils Strategy Consult</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Libre+Baskerville:wght@400;700&family=Dancing+Script:wght@400;700&family=Caprasimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
 
     <!-- Bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome 6.6.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Favicon & OG Tags -->
+    <!-- Paystack -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Favicon & OG -->
     <link rel="icon" type="image/png" href="images/jwils-logo.png">
-    <meta property="og:title" content="Event Registration - Business Growth Implementation Intensive">
-    <meta property="og:description" content="Register for the Business Growth Implementation Intensive by Judith Wilson.">
+    <meta property="og:title" content="Register — Business Growth Intensive | Jwils Strategy Consult">
+    <meta property="og:description" content="Secure your seat at the Business Growth Implementation Intensive. 2nd May 2026 · Osu, Accra.">
     <meta property="og:image" content="images/jwils-logo.png">
 
-    <!-- Your Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── ROOT ── */
+        :root {
+            --primary:       #6D1A36;   /* Burgundy */
+            --primary-light: #9B2A4E;   /* Lighter burgundy */
+            --primary-pale:  rgba(109,26,54,0.1);
+            --accent:        #1B4F8A;   /* Deep blue */
+            --accent-light:  #2E6DB4;   /* Lighter blue */
+            --white:         #FFFFFF;
+            --off-white:     #F8F4F5;   /* Warm white for form bg */
+            --border:        #E2D4D8;   /* Soft burgundy-tinted border */
+            --text-dark:     #2A1018;   /* Near-black body text */
+            --text-mid:      #6B4A55;   /* Mid-tone for labels/muted */
+            --text-light:    #9B7585;   /* Light muted text */
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        /* ── PAGE WRAPPER ── */
+        .page-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1rem 3rem;
+            background:
+                radial-gradient(circle at center, rgba(109,26,54,0.72), rgba(27,79,138,0.85)),
+                url("images/hero-bg.png") center / cover no-repeat;
+        }
+
+        /* ── CARD ── */
+        .reg-card {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 520px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(109,26,54,0.25), 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        /* ── HERO BRIEF (top of card) ── */
+        .card-hero {
+            background: linear-gradient(145deg, var(--primary) 0%, #4A1128 60%, var(--accent) 100%);
+            padding: 2.4rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* decorative top bar */
+        .card-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-light), #fff, var(--primary-light));
+        }
+
+        /* decorative bottom border */
+        .card-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 2rem; right: 2rem;
+            height: 1px;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .brand-logo::before,
+        .brand-logo::after {
+            content: '';
+            flex: 1;
+            max-width: 40px;
+            height: 1px;
+            background: rgba(255,255,255,0.35);
+        }
+
+        .eyebrow-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.95);
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.2rem;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .card-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 0.9rem;
+        }
+
+        .card-hero h1 em {
+            font-style: italic;
+            color: #f0c0cc;
+        }
+
+        .card-hero p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.65;
+            max-width: 400px;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* meta pills row */
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem 0.8rem;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: #fff;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 0.3rem 0.8rem;
+            border-radius: 100px;
+            font-weight: 500;
+        }
+
+        .meta-pill i { color: #a8c8f0; font-size: 0.7rem; }
+
+        /* ── FORM BODY ── */
+        .card-body-inner {
+            padding: 2rem;
+            background: var(--white);
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-divider span {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .form-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-mid);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .form-control {
+            background: var(--off-white) !important;
+            border: 1.5px solid var(--border) !important;
+            border-radius: 6px !important;
+            color: var(--text-dark) !important;
+            font-size: 0.9rem !important;
+            padding: 0.7rem 1rem !important;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 3px rgba(109,26,54,0.12) !important;
+            outline: none;
+            background: #fff !important;
+        }
+
+        .form-control::placeholder { color: #bba8b0 !important; }
+
+        /* plan selector */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-option {
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 0.9rem 0.7rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            background: var(--off-white);
+        }
+
+        .plan-option:hover {
+            border-color: var(--primary-light);
+            background: var(--primary-pale);
+        }
+
+        .plan-option.selected {
+            border-color: var(--primary);
+            background: var(--primary-pale);
+            box-shadow: 0 0 0 3px rgba(109,26,54,0.08);
+        }
+
+        .plan-name {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.2rem;
+        }
+
+        .plan-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .plan-desc {
+            font-size: 0.65rem;
+            color: var(--text-light);
+            margin-top: 0.15rem;
+        }
+
+        /* pay button */
+        .btn-pay {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.95rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(109,26,54,0.35);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-pay:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(109,26,54,0.45);
+        }
+
+        .btn-pay:disabled { opacity: 0.65; cursor: not-allowed; }
+
+        /* status message */
+        #regMsg {
+            font-size: 0.82rem;
+            border-radius: 6px;
+            padding: 0;
+            margin-top: 0.8rem;
+            min-height: 0;
+            transition: all 0.3s;
+        }
+
+        #regMsg.show { padding: 0.75rem 1rem; }
+
+        #regMsg.success {
+            background: #EBF3FB;
+            border: 1px solid #90b8df;
+            color: var(--accent);
+        }
+
+        #regMsg.error {
+            background: #fdf0f3;
+            border: 1px solid #e8a0b0;
+            color: var(--primary);
+        }
+
+        #regMsg.warning {
+            background: #fdf8ec;
+            border: 1px solid #d4b95e;
+            color: #8a6a10;
+        }
+
+        /* security note */
+        .secure-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 0.9rem;
+        }
+
+        .secure-note i { color: var(--accent-light); }
+
+        /* ── FOOTER ── */
+        .page-footer {
+            text-align: center;
+            margin-top: 1.8rem;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .page-footer a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+        }
+
+        /* ── SPINNER ── */
+        .spinner-border-sm {
+            width: 0.9rem;
+            height: 0.9rem;
+            border-width: 0.15em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 480px) {
+            .card-hero { padding: 2rem 1.4rem 1.6rem; }
+            .card-body-inner { padding: 1.4rem; }
+            .plan-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <main class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="text-center mb-5">
-                        <img src="images/jwils-logo.png" height="80" alt="JWILS Logo" class="mb-3">
-                        <h1 class="display-5 fw-bold font-heading">Business Growth Implementation Intensive</h1>
-                        <p class="lead">Secure your spot for the intensive training on content creation, ads, and conversion strategies.</p>
-                        <p><strong><i class="fas fa-map-marker-alt"></i> Osu &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i> 2nd May 2026 &nbsp;&nbsp; <i class="fas fa-users"></i> Limited to 50 entrepreneurs</strong></p>
-                    </div>
 
-                    <!-- Early Bird Offer Section -->
-                    <div class="alert alert-danger text-center mb-4" role="alert">
-                        <h5 class="alert-heading fw-bold">Early Bird Offer - GH¢850</h5>
-                        <p class="mb-2">Regular Price: <strong class="text-decoration-line-through">GH¢1,200</strong></p>
-                        <p class="mb-3">Offer ends on <strong>1st April 2026</strong></p>
-                        <div id="countdown" class="fw-bold fs-5"></div>
-                    </div>
+<div class="page-wrap">
 
-                    <div class="card shadow-lg">
-                        <div class="card-body p-5">
-                            <h2 class="card-title text-center mb-4 font-heading">Register Now</h2>
-                            <form id="registrationForm">
-                                <div class="mb-3">
-                                    <label for="fullName" class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="business" class="form-label">Business Name (Optional)</label>
-                                    <input type="text" class="form-control" id="business" name="business">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Additional Message (Optional)</label>
-                                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-jwils btn-lg rounded-pill px-5" id="submitBtn">
-                                        <i class="fas fa-paper-plane me-2"></i>Submit Registration
-                                    </button>
-                                </div>
-                                <div id="form-message" class="mt-3 text-center"></div>
-                            </form>
-                        </div>
-                    </div>
+    <div class="reg-card">
 
-                    <div class="text-center mt-4">
-                        <p class="text-muted">For inquiries, contact us at <a href="mailto:missabenawilson123@gmail.com">missabenawilson123@gmail.com</a></p>
-                    </div>
-                </div>
+        <!-- ── HERO BRIEF ── -->
+        <div class="card-hero">
+            <div class="brand-logo">Jwils Strategy Consult</div>
+            <div class="eyebrow-badge">Business Growth Implementation Intensive</div>
+
+            <h1>Build a Business That Attracts Customers <em>Consistently</em> — Not Occasionally.</h1>
+
+            <p>Learn how to create better content, run ads properly, and turn attention into real revenue — in one powerful day.</p>
+
+            <div class="meta-row">
+                <span class="meta-pill"><i class="fas fa-map-marker-alt"></i> Osu, Accra</span>
+                <span class="meta-pill"><i class="fas fa-calendar-alt"></i> 2nd May 2026</span>
+                <span class="meta-pill"><i class="fas fa-users"></i> 50 Seats Only</span>
             </div>
         </div>
-    </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <!-- ── REGISTRATION FORM ── -->
+        <div class="card-body-inner">
+
+            <div class="section-divider"><span>Secure Your Seat</span></div>
+
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="regName" placeholder="Your full name">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="regEmail" placeholder="your@email.com">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="regPhone" placeholder="+233 XX XXX XXXX">
+            </div>
+
+            <label class="form-label mb-2">Select Payment Plan</label>
+            <div class="plan-grid">
+                <div class="plan-option selected" id="planFull" onclick="selectPlan('full')">
+                    <div class="plan-name">Full Payment</div>
+                    <div class="plan-price">GH¢2,000</div>
+                    <div class="plan-desc">One-time · Full access</div>
+                </div>
+                <div class="plan-option" id="planHalf" onclick="selectPlan('half')">
+                    <div class="plan-name">Half Payment</div>
+                    <div class="plan-price">GH¢1,000</div>
+                    <div class="plan-desc">Deposit · Balance a day before</div>
+                </div>
+            </div>
+
+            <button class="btn-pay" id="payBtn" onclick="initiatePayment()">
+                <i class="fas fa-lock"></i> Pay Securely with Paystack
+            </button>
+
+            <div id="regMsg"></div>
+
+            <p class="secure-note">
+                <i class="fas fa-shield-alt me-1"></i>
+                Secured by Paystack · 256-bit SSL Encryption
+            </p>
+
+        </div>
+    </div>
+
+    <div class="page-footer">
+        &copy; 2026 Jwils Strategy Consult &nbsp;·&nbsp;
+        <a href="https://jwils.netlify.app">jwils.netlify.app</a>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+
+    /* ── CONFIG ── */
+    var PAYSTACK_KEY    = 'pk_live_49bf25182b74e52f2c21524d3cf2f6dbb4e014be';
+    var WHATSAPP_NUMBER = '233500860750';
+
+    var PLANS = {
+        full: { label: 'Full Payment',  amount: 200000, display: 'GH¢2,000' },
+        half: { label: 'Half Payment',  amount: 100000, display: 'GH¢1,000' }
+    };
+
+    var selectedPlan = 'full';
+
+    /* ── PLAN SELECTION ── */
+    window.selectPlan = function (plan) {
+        selectedPlan = plan;
+        document.getElementById('planFull').classList.toggle('selected', plan === 'full');
+        document.getElementById('planHalf').classList.toggle('selected', plan === 'half');
+    };
+
+    /* ── HELPERS ── */
+    function val(id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+    }
+
+    function generateRef() {
+        return 'JWILS-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
+    }
+
+    function setBtn(loading) {
+        var btn = document.getElementById('payBtn');
+        if (!btn) return;
+        btn.disabled = loading;
+        btn.innerHTML = loading
+            ? '<span class="spinner-border spinner-border-sm"></span> Initializing...'
+            : '<i class="fas fa-lock"></i> Pay Securely with Paystack';
+    }
+
+    function showMsg(text, type) {
+        var el = document.getElementById('regMsg');
+        if (!el) return;
+        el.className = 'show ' + (type || 'error');
+        el.innerHTML = text;
+    }
+
+    function clearMsg() {
+        var el = document.getElementById('regMsg');
+        if (el) { el.className = ''; el.innerHTML = ''; }
+    }
+
+    /* ── WHATSAPP NOTIFICATION ── */
+    function notifyWhatsApp(name, email, phone, plan, ref) {
+        var msg = [
+            '*New Registration — Business Growth Intensive*',
+            '',
+            '*Name:*  '  + name,
+            '*Email:* '  + email,
+            '*Phone:* '  + phone,
+            '*Plan:*  '  + plan.label + ' (' + plan.display + ')',
+            '*Ref:*   '  + ref,
+            '*Event:* 2nd May 2026 · Osu, Accra'
+        ].join('\n');
+
+        window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
+    }
+
+    /* ── PAYMENT ── */
+    window.initiatePayment = function () {
+        var name  = val('regName');
+        var email = val('regEmail');
+        var phone = val('regPhone');
+
+        clearMsg();
+
+        if (!name || !email || !phone) {
+            showMsg('⚠️ Please fill in all fields before proceeding.', 'error');
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showMsg('⚠️ Please enter a valid email address.', 'error');
+            return;
+        }
+
+        var plan = PLANS[selectedPlan];
+        var ref  = generateRef();
+
+        setBtn(true);
+
+        var handler = PaystackPop.setup({
+            key:      PAYSTACK_KEY,
+            email:    email,
+            amount:   plan.amount,
+            currency: 'GHS',
+            ref:      ref,
+            metadata: {
+                custom_fields: [
+                    { display_name: 'Full Name', variable_name: 'full_name', value: name  },
+                    { display_name: 'Phone',     variable_name: 'phone',     value: phone },
+                    { display_name: 'Plan',      variable_name: 'plan',
+                      value: plan.label + ' – ' + plan.display }
+                ]
+            },
+
+            callback: function (response) {
+                setBtn(false);
+                showMsg(
+                    '✅ <strong>Payment confirmed!</strong> Ref: <code style="font-size:0.75rem">' +
+                    response.reference + '</code><br>See you on 2nd May 2026! 🎊',
+                    'success'
+                );
+                notifyWhatsApp(name, email, phone, plan, response.reference);
+            },
+
+            onClose: function () {
+                setBtn(false);
+                showMsg('Payment was cancelled. Try again when you\'re ready.', 'warning');
+            }
+        });
+
+        handler.openIframe();
+    };
+
+})();
+</script>
+
 </body>
 </html>
